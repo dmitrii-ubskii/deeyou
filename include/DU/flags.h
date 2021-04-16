@@ -3,6 +3,8 @@
 
 #include <bitset>
 
+namespace DU
+{
 template <typename Enum>
 class Flags
 {
@@ -25,6 +27,6 @@ class Flags
 	private:
 		std::bitset<static_cast<std::size_t>(Enum::COUNT_)> bits;
 };
-
+}
 
 #endif // FLAGS_HPP_
