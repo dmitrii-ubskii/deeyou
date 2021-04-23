@@ -22,9 +22,9 @@ class Flags
 
 		void set(Enum f) { bits[static_cast<std::size_t>(f)] = true; }
 		void unset(Enum f) { bits[static_cast<std::size_t>(f)] = false; }
-		auto operator[](Enum f) { return bits[static_cast<std::size_t>(f)]; }
+		auto operator[](Enum f) const { return bits[static_cast<std::size_t>(f)]; }
 
-		std::string to_string() { return bits.to_string(); }
+		std::string to_string() const { return bits.to_string(); }
 
 	private:
 		std::bitset<enumLength<Enum>> bits;
