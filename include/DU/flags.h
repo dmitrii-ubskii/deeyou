@@ -27,7 +27,7 @@ class Flags
 		std::string to_string() const { return bits.to_string(); }
 
 	private:
-		std::bitset<enumLength<Enum>> bits;
+		std::bitset<enumLength<Enum>()> bits;
 };
 }
 
