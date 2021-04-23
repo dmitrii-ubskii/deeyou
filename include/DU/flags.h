@@ -3,6 +3,8 @@
 
 #include <bitset>
 
+#include "DU/enum_utils.h"
+
 namespace DU
 {
 template <typename Enum>
@@ -25,7 +27,7 @@ class Flags
 		std::string to_string() { return bits.to_string(); }
 
 	private:
-		std::bitset<static_cast<std::size_t>(Enum::COUNT_)> bits;
+		std::bitset<enumLength<Enum>> bits;
 };
 }
 
