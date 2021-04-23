@@ -1,5 +1,5 @@
-#ifndef FLAGS_HPP_
-#define FLAGS_HPP_
+#ifndef FLAGS_H_
+#define FLAGS_H_
 
 #include <bitset>
 
@@ -29,4 +29,4 @@ class Flags
 };
 }
 
-#endif // FLAGS_HPP_
+#endif // FLAGS_H_
