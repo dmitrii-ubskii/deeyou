@@ -1,5 +1,5 @@
-#ifndef UTILS_H_
-#define UTILS_H_
+#ifndef DU_ENUM_UTILS_H_
+#define DU_ENUM_UTILS_H_
 
 #include <climits>
 #include <cstring>
@@ -56,4 +56,4 @@ constexpr std::size_t enumLength()
 }
 }
 
-#endif // UTILS_H_
+#endif // DU_ENUM_UTILS_H_
