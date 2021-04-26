@@ -17,7 +17,8 @@ constexpr bool isValid()
 	// "bool isValid() [Enum = Fruit, Value = 15]" for invalid values in some cases.
 	// "bool isValid() [Enum = Fruit, Value = (Fruit)15]" for invalid values in other cases.
 	auto name = __PRETTY_FUNCTION__;
-	auto i = strlen(name);
+	auto i = 0;
+	for (; name[i] != '\0'; i++);
 	for (; i >= 0; i--)
 	{
 		if (name[i] == ' ' || name[i] == ')')  // looking for either a space or a C-style cast
