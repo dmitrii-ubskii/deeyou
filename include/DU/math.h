@@ -3,7 +3,8 @@
 
 namespace DU
 {
-constexpr int sign(int a)
+template <typename T>
+constexpr int sign(T a)
 {
 	return (a > 0) - (a < 0);
 }
