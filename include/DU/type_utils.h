@@ -12,7 +12,7 @@ template <typename T>
 constexpr bool allSame<T> = true;
 
 template <typename T, typename U>
-constexpr bool allSame<T, U> = std::isSame_v<T, U>;
+constexpr bool allSame<T, U> = std::is_same_v<T, U>;
 
 template <typename T, typename U, typename... Rest>
 constexpr bool allSame<T, U, Rest...> = allSame<T, U> && allSame<U, Rest...>;
