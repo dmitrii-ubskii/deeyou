@@ -1,5 +1,4 @@
-#ifndef DU_FLAGS_H_
-#define DU_FLAGS_H_
+#pragma once
 
 #include <bitset>
 
@@ -30,5 +29,3 @@ class Flags
 		std::bitset<enumLength<Enum>()> bits;
 };
 }
-
-#endif // DU_FLAGS_H_

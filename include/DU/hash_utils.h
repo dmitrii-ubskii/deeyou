@@ -1,5 +1,4 @@
-#ifndef DU_HASH_UTILS_H_
-#define DU_HASH_UTILS_H_
+#pragma once
 
 #include <type_traits>
 
@@ -20,5 +19,3 @@ constexpr T hashCombine(T u, Ts... vs)
     return u ^ (hashCombine(vs...) + 0x9e3779b9 + (u << 6) + (u >> 2));  // Boost's hash_combine()
 }
 }
-
-#endif // DU_HASH_UTILS_H_

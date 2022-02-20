@@ -1,5 +1,4 @@
-#ifndef DU_TYPE_UTILS_H_
-#define DU_TYPE_UTILS_H_
+#pragma once
 
 #include <type_traits>
 
@@ -41,5 +40,3 @@ struct FirstOfPack
 template <typename... Ts>
 using FirstOfPackT = typename FirstOfPack<Ts...>::Type;
 }
-
-#endif // DU_TYPE_UTILS_H_

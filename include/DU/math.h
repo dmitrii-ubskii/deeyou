@@ -1,5 +1,4 @@
-#ifndef DU_MATH_H_
-#define DU_MATH_H_
+#pragma once
 
 namespace DU
 {
@@ -32,5 +31,3 @@ constexpr int floorDiv(int const divident, int const divisor)
 	return quot - (rem != 0 && sign(rem) != sign(divisor));
 }
 }
-
-#endif // DU_MATH_H_

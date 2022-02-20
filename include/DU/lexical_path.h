@@ -1,5 +1,4 @@
-#ifndef DU_LEXICAL_PATH_H_
-#define DU_LEXICAL_PATH_H_
+#pragma once
 
 #include <string>
 
@@ -117,5 +116,3 @@ template <> struct hash<DU::LexicalPath>
 	}
 };
 }
-
-#endif // DU_LEXICAL_PATH_H_

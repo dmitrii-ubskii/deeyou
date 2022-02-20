@@ -1,5 +1,4 @@
-#ifndef DU_ENUM_UTILS_H_
-#define DU_ENUM_UTILS_H_
+#pragma once
 
 #include <climits>
 #include <cstring>
@@ -56,5 +55,3 @@ constexpr std::size_t enumLength()
 	return Impl::enumLengthImpl<Enum>(std::make_integer_sequence<int, Max>());
 }
 }
-
-#endif // DU_ENUM_UTILS_H_
