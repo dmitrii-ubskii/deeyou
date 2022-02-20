@@ -1,6 +1,7 @@
 #pragma once
 
 #include <type_traits>
+#include <utility>
 
 namespace DU
 {
@@ -15,6 +16,13 @@ constexpr bool allSame<T, U> = std::is_same_v<T, U>;
 
 template <typename T, typename U, typename... Rest>
 constexpr bool allSame<T, U, Rest...> = allSame<T, U> && allSame<U, Rest...>;
+
+template <typename T, typename Tag>
+struct StrongTypedef: public T
+{
+	template <typename... Args>
+	explicit StrongTypedef(Args&&... args): T{std::forward<Args>(args)...} {}
+};
 
 template <typename To, typename From>
 struct ConstnessAs
