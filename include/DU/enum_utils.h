@@ -1,5 +1,6 @@
 #pragma once
 
+#include <array>
 #include <climits>
 #include <cstring>
 #include <utility>
@@ -47,11 +48,23 @@ constexpr int enumLengthImpl(std::integer_sequence<int, I...>)
 {
 	return countValid<Enum, static_cast<Enum>(I)...>();
 }
+
+template <typename Enum, std::size_t N, int... I>
+constexpr std::array<Enum, N> enumValuesImpl(std::integer_sequence<int, I...>)
+{
+	return {static_cast<Enum>(I)...};
+}
 }
 
 template <typename Enum, int Max = 256>
 constexpr std::size_t enumLength()
 {
 	return Impl::enumLengthImpl<Enum>(std::make_integer_sequence<int, Max>());
+}
+
+template <typename Enum, std::size_t N = enumLength<Enum>()>
+constexpr std::array<Enum, N> enumValues()
+{
+	return Impl::enumValuesImpl<Enum, N>(std::make_integer_sequence<int, N>());
 }
 }
