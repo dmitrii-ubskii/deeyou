@@ -14,6 +14,10 @@ struct Vector2D
 	Rep x;
 	Rep y;
 
+	Vector2D()
+		: Vector2D(0, 0)
+	{}
+
 	Vector2D(Rep x_, Rep y_)
 		: x{x_}
 		, y{y_}
@@ -25,7 +29,7 @@ struct Vector2D
 	Type& operator=(Type&& other) = default;
 	~Vector2D() = default;
 
-	constexpr Type operator+(Type const& other)
+	constexpr Type operator+(Type const& other) const
 	{
 		return {x + other.x, y + other.y};
 	}
