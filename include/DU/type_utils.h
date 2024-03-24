@@ -22,6 +22,8 @@ struct StrongTypedef: public T
 {
 	template <typename... Args>
 	explicit StrongTypedef(Args&&... args): T{std::forward<Args>(args)...} {}
+
+	constexpr friend auto operator<=>(StrongTypedef<T, Tag> const&, StrongTypedef<T, Tag> const&) = default;
 };
 
 template <typename To, typename From>

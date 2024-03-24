@@ -29,6 +29,8 @@ struct Vector2D
 	Type& operator=(Type&& other) = default;
 	~Vector2D() = default;
 
+	constexpr auto operator<=>(Type const& other) const = default;
+
 	constexpr Type operator+(Type const& other) const
 	{
 		return {x + other.x, y + other.y};
